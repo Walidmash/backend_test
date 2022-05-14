@@ -4,7 +4,6 @@
   "main": "index.js",
   "scripts": {
     "swagger-autogen": "node swagger.js",
-    "heroku-postbuild": "node swagger.js",
     "build": "node swagger.js",
     "test": "tape tests/*.spec.js",
     "start": "node ./src/index.js",

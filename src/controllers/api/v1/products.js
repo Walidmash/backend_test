@@ -5,7 +5,7 @@ const getAllProducts = (req, res) => {
         limit: 3,
       })
       .then(product => {
-        res.send(product)
+        res.status(200).send(product)
     })
       .catch(error => console.error(`error getting all products: ${error}`));
 }

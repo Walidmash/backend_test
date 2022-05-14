@@ -17,7 +17,7 @@ Make sure you have npm installed
   - [x] add testing tools
   - [X] build register connected to Stripe API 
   - [X] build sign in
-  WIP - [ ] token authentication
+  - [ ] token authentication -- WIP
   - [ ] unite testing and API testing
   - [ ] build get all products end-point to get products from Stripe
   - [ ] depoly api to online server

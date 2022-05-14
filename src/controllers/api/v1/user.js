@@ -69,7 +69,7 @@ const postUserLogIn = (req, res) => {
         stripe_id: result.stripe_id,
         token
       }
-      res.status(201).json(user); // done; return user
+      res.status(200).json(user); // done; return user
   });
 };
 

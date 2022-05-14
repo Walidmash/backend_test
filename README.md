@@ -20,12 +20,12 @@ Make sure you have npm installed
   - [X] token authentication
   - [ ] DB testing
   - [X] API testing
-  - [ ] build get all products end-point to get products from Stripe
-  - [ ] Products list (with price). The products should be fetched from Stripes (assuming you have
+  - [X] build get all products end-point to get products from Stripe
+  - [X] Test => Products list (with price). The products should be fetched from Stripes (assuming you have
 manually entered them before).
 5 Product purchase (from the available
   - [ ] Product purchase (from the available ones) (you can assume that a credit card for the user
 was already present in the system). An invoice should be generated and sent to the user
 after the purchase.
-  - [ ] depoly api to online server
+  - [ ] depoly API on a cloud
   - [ ] learn and add docker

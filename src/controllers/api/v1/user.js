@@ -3,6 +3,8 @@ const tokenHandler = require('./helpers/index.js').token;
 const { stripe } = require('./helpers/index.js');
 
 const postUserRegister = (req, res) => {
+  /* 	#swagger.tags = ['User']
+        #swagger.description = 'Endpoint to sign in a specific user' */
   try {
     // Get user input
     let { password, email } = req.body;

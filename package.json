@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "swagger-autogen": "node swagger.js",
     "test": "tape tests/*.spec.js",
     "start": "node ./src/index.js",
     "start:watch": "nodemon -q ./src/index.js",
@@ -24,7 +25,9 @@
     "pg": "^8.7.3",
     "pg-promise": "^10.11.1",
     "semistandard": "^11.0.0",
-    "stripe": "^9.1.0"
+    "stripe": "^9.1.0",
+    "swagger-autogen": "^2.21.1",
+    "swagger-ui-express": "^4.4.0"
   },
   "devDependencies": {
     "shot": "^3.4.2",

@@ -8,9 +8,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '..', 'public'), { maxAge: '30d' }));
 app.use('/api/v1/', routes);
+// app.use((req, res) => {
+//   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+// });
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
-});
+    res.status(404).json({ message: 'End point not found' })
+  });
 
 app.use((err, req, res) => {
   res.status(err.status || 500);

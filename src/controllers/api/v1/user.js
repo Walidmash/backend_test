@@ -55,6 +55,10 @@ const postUserRegister = (req, res) => {
 }
 const postUserLogIn = (req, res) => {
   const { email, password } = req.body;
+  // Validate user input
+  if (!(email && password))
+    return res.status(400).send("email and password are required");
+  
   queries.user.userLogIn(email, password, (err, result) => {
     if (err) {
       if (err.notMatched) return res.status(401).json({message: "Wrong email/password"});
@@ -69,7 +73,7 @@ const postUserLogIn = (req, res) => {
         stripe_id: result.stripe_id,
         token
       }
-      res.status(201).json(user); // done; return user
+      res.status(200).json(user); // done; return user
   });
 };
 

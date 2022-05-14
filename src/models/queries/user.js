@@ -31,10 +31,9 @@ const userLogIn = (email, password, cb) => {
     values: [email]
   };
   connection.query(sql, (error, res) => {
-    if (error) {
+    if (error)
       cb(error);
-    } else {
-      console.log(res.rows);
+    else {
       if (res.rows.length === 0 || !users.comparePassword(password, res.rows[0].password))
         cb({ notMatched: true });
       else

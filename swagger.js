@@ -1,4 +1,5 @@
 const swaggerAutogen = require('swagger-autogen')()
+require('env2')('./config.env');
 
 const outputFile = './swagger_output.json'
 const endpointsFiles = ['./src/app.js']
@@ -9,7 +10,7 @@ const doc = {
         title: "backend test",
         description: "test auto-doc."
     },
-    host: "localhost:4000",
+    host: process.env.HOST,
     basePath: "/",
     schemes: ['http', 'https'],
     consumes: ['application/json'],

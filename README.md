@@ -8,7 +8,7 @@ Make sure you have npm installed
   3. run: `npm i`
   4. add the `config.env` file with environment variables needed:
     `TEST_URL`, `DATABASE_URL`, `STRIPE_PRIVATE_KEY`, `TOKEN_SECRET`
-  5. run the server: `npm run start:watch`
+  5. run the server: `npm run start`
   6. open `localhost:4000` in the browser
 
 ## Tastks

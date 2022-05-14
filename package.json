@@ -5,7 +5,7 @@
   "scripts": {
     "swagger-autogen": "node swagger.js",
     "test": "tape tests/*.spec.js",
-    "start": "node ./src/index.js",
+    "start": "node swagger.js",
     "start:watch": "nodemon -q ./src/index.js",
     "test-db": "NODE_ENV=test node tests/test.spec.js | tap-spec",
     "heroku-postbuild": "webpack -p --config webpack.config.prod.js --progress",

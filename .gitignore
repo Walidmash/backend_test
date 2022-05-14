@@ -1,5 +1,6 @@
 config.env
 package-lock.json
+swagger_output.json
 # Logs
 logs
 *.log

@@ -1,0 +1,157 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "backend test",
+    "description": "test auto-doc."
+  },
+  "host": "localhost:4000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "User",
+      "description": "user's Endpoints"
+    },
+    {
+      "name": "Product",
+      "description": "product's Endpoints"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "securityDefinitions": {
+    "ApiKeyAuth": {
+      "type": "apiKey",
+      "name": "x-access-token",
+      "in": "header"
+    }
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v1/register": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint to register as a user.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "User information.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Register"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/api/v1/login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "Endpoint to login as a user.",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "User information.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Login"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/api/v1/allproducts": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "description": "Endpoint get all products.",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "test5@test.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "test5"
+        },
+        "stripe_id": {
+          "type": "string",
+          "example": "dfds134"
+        }
+      }
+    },
+    "Login": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "test5@test.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "test5"
+        }
+      },
+      "required": [
+        "email",
+        "password"
+      ]
+    },
+    "Register": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "test6@test.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "test6"
+        }
+      },
+      "required": [
+        "email",
+        "password"
+      ]
+    }
+  }
+}

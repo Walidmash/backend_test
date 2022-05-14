@@ -9,8 +9,6 @@
     "start:watch": "nodemon -q ./src/index.js",
     "test-db": "NODE_ENV=test node tests/test.spec.js | tap-spec",
     "test-routes": "NODE_ENV=test node tests/routes.spec.js | tap-spec",
-    "dev:build": "webpack --watch",
-    "dev:start": "nodemon --exec babel-node ./src/"
   },
   "license": "ISC",
   "dependencies": {

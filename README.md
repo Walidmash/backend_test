@@ -19,7 +19,7 @@ Make sure you have npm installed
   - [X] build sign in
   - [X] token authentication
   - [ ] DB testing
-  - [ ] API testing -- WIP
+  - [X] API testing
   - [ ] build get all products end-point to get products from Stripe
   - [ ] Products list (with price). The products should be fetched from Stripes (assuming you have
 manually entered them before).

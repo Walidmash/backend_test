@@ -10,7 +10,7 @@ const doc = {
         title: "backend test",
         description: "test auto-doc."
     },
-    host: process.env.HOST,
+    host: `${process.env.HOST}:${process.env.PORT}`,
     basePath: "/",
     schemes: ['http', 'https'],
     consumes: ['application/json'],

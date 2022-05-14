@@ -48,3 +48,30 @@ test('user Login wrong password/email', t => {
 });
 
 
+test('failure to authenticate /api/v1/allproducts', t => {
+  supertest(app)
+    .get('/api/v1/allproducts')
+    .expect(401)
+    .end((err, res) => {
+      if (err) {
+        t.notOk(err);
+      } else {
+        t.same(res.statusCode, 401, 'No token Status code is 401');
+        t.end();
+      }
+    });
+});
+test('successfull to authenticate /api/v1/allproducts', t => {
+  supertest(app)
+    .get('/api/v1/allproducts')
+    .set('x-access-token',testUser.token)
+    .expect(200)
+    .end((err, res) => {
+      if (err) {
+        t.notOk(err);
+      } else {
+        t.same(res.statusCode, 200, 'Token accepted');
+        t.end();
+      }
+    });
+});

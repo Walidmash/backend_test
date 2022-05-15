@@ -19,7 +19,7 @@ Make sure you have npm installed
   - [X] build register connected to Stripe API 
   - [X] build sign in
   - [X] token authentication
-  - [ ] DB testing
+  - [X] DB testing
   - [X] API testing
   - [X] build get all products end-point to get products from Stripe
   - [X] Test => Products list (with price). The products should be fetched from Stripes (assuming you have

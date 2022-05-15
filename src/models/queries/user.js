@@ -1,5 +1,5 @@
 const connection = require('../database/db_connection.js');
-const users = require('../helpers/users.js');
+const users = require('../helpers/user.js');
 
 const getUser = (email, cb) => {
   const sql = {
